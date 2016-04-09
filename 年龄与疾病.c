@@ -3,7 +3,7 @@
 using namespace std;
 int main(){
 int a[100];
-int n,b=0,c=0,d=0,e=0;
+double n,b=0,c=0,d=0,e=0;
 cin>>n;
 for(int i=0;i<n;i++)
 	{
@@ -22,9 +22,9 @@ for(int i=0;i<n;i++)
   m=100*c/n;
   j=100*d/n;
   k=100*e/n;
-cout<<"1-18:"<<fixed<<setprecision(2)<<l<<"%"<<endl;
-cout<<"19-35:"<<fixed<<setprecision(2)<<m<<'%'<<endl;
-cout<<"36-60:"<<fixed<<setprecision(2)<<j<<'%'<<endl;
-cout<<"60-:"<<fixed<<setprecision(2)<<k<<'%'<<endl;
+cout<<"1-18: "<<fixed<<setprecision(2)<<l<<"%"<<endl;
+cout<<"19-35: "<<fixed<<setprecision(2)<<m<<"%"<<endl;
+cout<<"36-60: "<<fixed<<setprecision(2)<<j<<"%"<<endl;
+cout<<"60-: "<<fixed<<setprecision(2)<<k<<"%"<<endl;
   return 0;
   }
