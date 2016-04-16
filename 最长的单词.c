@@ -17,18 +17,20 @@ int main(){
 	    max=b[i];
 		}//找出来最长单词的长度。
 
-  int len=0;
+  int l=0;//定义单词的长度，找到第一个符合max的
   for(int i=0;a[i]!='.';i++)
   {
-  		len++;
-		if(len==max)
+     l++;
+	 if(a[i]==' ')
+	   l=0;
+	   
+	 else if(l==max)
 		 {
-		 		for(int k=i-len+1;k<=i;k++)
+		        int k=0;
+		 		for(k=i-l+1;k<=i;k++)
 				   cout<<a[k];
 				   return 0;
 				   }
-		else if(a[i]==' ')
-		  len=0;
 		  }
   return 0;
   }
