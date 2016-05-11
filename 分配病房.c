@@ -28,7 +28,7 @@ int main()
 	}
 	for(int i=0;i<m;i++)
 	{
-		if(b[i]>c||a[i]==c)
+		if(b[i]>c)
 		{	
 			
 			cout<<setw(3)<<setfill('0')<<a[i];
