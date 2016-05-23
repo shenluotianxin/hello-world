@@ -6,8 +6,8 @@
 #define false 0
 typedef struct Node
 {
-	int data;
-	struct Node *pNext;
+		int data;
+		struct Node *pNext;
 }Node,*pNode;
 
 pNode InitList();
@@ -30,25 +30,25 @@ pNode InitList()
 		pHead = (pNode)malloc(sizeof(Node));
 		if(pHead == NULL)
 		{
-				printf("\n**ERROR:链表初始化失败\n\n");
+				printf("\n**ERROR:链表初始化失败\n\n"); 
 				exit(-1);
-		}
+		}    
 		pTail = pHead;
 		pTail->pNext = NULL;
-		printf("\n**请输入链表数据，个数为：");
-		scanf("%d",&length);
+		printf("\n**请输入链表数据，个数为："); 
+		scanf("%d",&length); 
 		for(i = 0; i < length; i++)
 		{
-				printf("\n****input:请输入第%d个数据:",i+1);
+				printf("\n****input:请输入第%d个数据:",i+1); 
 				scanf("%d",&tempData);
 				pNode pNew = (pNode)malloc(sizeof(Node));
 				if(pHead == NULL)
 				{
-						printf("\n**ERROR:链表创建失败\n\n");
+						printf("\n**ERROR:链表创建失败\n\n"); 
 						exit(-1);
-				}
+				}        
 				pNew->data = tempData;
-				pTail->pNext = pNew;
+				pTail->pNext = pNew; 
 				pNew->pNext = NULL;
 				pTail = pNew;
 		}
@@ -58,15 +58,15 @@ pNode InitList()
 
 void DestroyList(pNode pHead)
 {
-		pNode temp = NULL;
-		int i = ListLength(pHead);
-		while(i--)
+		pNode temp = NULL;                                         
+		int i = ListLength(pHead);                                 
+		while(i--)                                                
 		{
-				temp = pHead;
+				temp = pHead;                                           
 				pHead = pHead->pNext;
 				free(temp);
 		}
-		free(pHead);
+		free(pHead);                                                                          
 		printf("\n**Success:链表已成功删除\n");
 }
 
@@ -117,7 +117,7 @@ int GetElem(pNode pHead,int locate)
 						locateNow++;
 				}
 		}
-		printf("\n**ERROR:数据不存在\n");
+		printf("\n**ERROR:数据不存在\n"); 
 		return -1;
 }
 
@@ -235,7 +235,7 @@ int main()
 		//printf("%d\n",GetElem(pHead,4));
 		//printf("%d\n",LocateElem(pHead,10));
 		ListTraverse(pHead);
-		//ListInsert(pHead,3,10);
+		//ListInsert(pHead,3,10); 
 		//ListDeleteOfLocation(pHead,4);
 		//ListTraverse(pHead);
 		//printf("%d\n",PriorElem(pHead,4));

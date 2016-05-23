@@ -1,0 +1,26 @@
+void Mergelist(List La,List Lb,List &Lc){
+	//已知线性表La和Lb中的元素按值非递减有序排列，归并La和Lb
+	//得到新的线性表Lc，Lc中的数据元素也按值非递减排列。
+	InitList(Lc)//构造空表Lc
+	i=j=1; k=0;
+	La_len=ListLength(La);
+	Lb_len=ListLength(Lb);
+	while((i<La_len)&&(j<=Lb_len)){
+	//La和Lb都非空
+		GetElem(La,i,ai);
+		GetElem(Lb,j,bj);
+		if(ai<bj){//将ai插入到Lc中
+			ListInsert(Lc,++k,ai);++i;}
+		else{//将bj插入到Lc中
+			ListInsert(Lc,++k,bj);++j;}
+	}
+	while(i<=La_len){//当La不空时
+		GetElem(La,i++;ai);
+		ListInsert(Lc,++k,ai);
+	}//插入La表中的剩余元素
+	while(j<=Lb_len){//当Lb不空时
+		GetElem(Lb,j++,bj);
+		ListInsert(Lc,++k,bj);
+	}//插入Lb表中的剩余元素
+}
+	
